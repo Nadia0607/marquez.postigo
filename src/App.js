@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes,Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
+import Home from './Componentes/Home/Home';
+import Login from './Componentes/Login/Login';
+import Navbar from './Componentes/Navbar/Navbar';
 
-function App() {
+
+function RoutesApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>HOLA marquez.postigo</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+   <div>
+    <Routes>
+
+      <Route path='/' element= {<Home/>} />
+      <Route path='login' element= {<Login/>} />
+      <Route path='navbar' element= {<Navbar/>} />
+      
+    </Routes>
+   </div>
+
   );
 }
-
-export default App;
+function RouterWrapper(){
+  return(
+    <BrowserRouter>
+      <RoutesApp/>
+    </BrowserRouter>
+  )
+}
+export default RouterWrapper;
