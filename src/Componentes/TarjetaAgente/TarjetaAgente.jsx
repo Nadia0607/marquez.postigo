@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 export default function TarjetaAgente(props) {
   return (
-    <div className='tarjeta'>
-    <img src={props.agente.displayIconSmall} alt="imagen" className='imagen'/>
+    <div className='tarjetaagente shadow'>
+    <img src={props.agente.displayIconSmall} alt="imagen" className='imagenagente'/>
     <Link to={`/detalle/${props.agente.uuid}`}>
-    <h4>{props.agente.displayName}</h4>
+    <h2>{props.agente.displayName}</h2>
     </Link>
     </div>
   )
