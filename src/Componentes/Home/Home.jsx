@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import { GetAgentes } from '../../Api/GetAgentes';
 import TarjetaAgente from '../TarjetaAgente/TarjetaAgente';
 
+
 export default function Home() {
 
 const [agentes, setAgentes] = useState([]);
@@ -25,7 +26,7 @@ fetchdata();
 //console.log(agentes);
   return (
     <>
-
+    
     {
       agentes.map((agente)=> {return(<TarjetaAgente agente={agente} key={agente.uuid} />)})
     }

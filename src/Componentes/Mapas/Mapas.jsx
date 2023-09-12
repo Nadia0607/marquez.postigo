@@ -3,6 +3,7 @@ import { GetMapas } from '../../Api/GetMapas';
 import "./Mapas.css";
 
 
+
 export default function Mapas() {
   const [mapas, setMapas] = useState([]);
   
@@ -24,6 +25,7 @@ export default function Mapas() {
 
     return (
       <>
+      
   
       {
         mapas.map((mapa)=> {return(

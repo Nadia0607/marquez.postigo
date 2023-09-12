@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { GetAgentePorId } from '../../Api/GetAgentePorId';
 import "./DetalleAgentes.css";
 
-
 export default function DetalleAgentes() { 
   const [agenteSeleccionado, setAgenteSeleccionado] = useState();
 
@@ -31,11 +30,14 @@ export default function DetalleAgentes() {
   }
 
   return (
+    
+    <>
     <div className='carddetalle shadow'>
     <h1>{agenteSeleccionado.displayName}</h1>
     <img src={agenteSeleccionado.displayIcon} alt="imagen" className='imagendetalle'/>
     <h2>Descripción:</h2>
     <p>{agenteSeleccionado.description}</p>
     </div>
+    </>
   )
 }
