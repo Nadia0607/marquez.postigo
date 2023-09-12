@@ -1,36 +1,29 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { GetAgentes } from '../../Api/GetAgentes';
 import TarjetaAgente from '../TarjetaAgente/TarjetaAgente';
-
+import './Home.css'; // Agrega un archivo CSS para Home si no lo has creado aún
 
 export default function Home() {
+  const [agentes, setAgentes] = useState([]);
 
-const [agentes, setAgentes] = useState([]);
-const [agenteSeleccionado, setAgenteSeleccionado] = useState();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await GetAgentes();
+        setAgentes(data);
+      } catch (error) {
+        console.error('Error al obtener los agentes', error);
+      }
+    };
 
-useEffect(() => {
-  const fetchdata = async () => {
-    try{
-      const data= await GetAgentes();
-      setAgentes(data);
-    }
-    catch(error){
-      console.error('Error al obtener los agentes',error);
-    }
-  }
+    fetchData();
+  }, []);
 
-fetchdata();
-
-}, [])
-
-//console.log(agentes);
   return (
-    <>
-    
-    {
-      agentes.map((agente)=> {return(<TarjetaAgente agente={agente} key={agente.uuid} />)})
-    }
-    
-    </>
-  )
+    <div className="agentes-container">
+      {agentes.map((agente) => (
+        <TarjetaAgente agente={agente} key={agente.uuid} />
+      ))}
+    </div>
+  );
 }

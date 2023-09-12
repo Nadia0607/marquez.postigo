@@ -1,22 +1,19 @@
+/* DetalleAgentes.css */
 .carddetalle {
-    width: 80vw;
-    height: 80vh;
-    background: white;
+    width: 80%;
+    max-width: 800px; /* Limita el ancho máximo de la tarjeta detallada */
+    background-color: #202329; /* Color de fondo similar a las tarjetas */
     border-radius: 10px;
-    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    overflow:hidden;
-    margin:10px;
+    margin: 10px auto; /* Centra la tarjeta horizontalmente */
     text-align: center;
     padding: 30px;
-   }
-   
-   .shadow {
-    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-                0 0  0 2px rgb(190, 190, 190),
-                0.3em 0.3em 1em rgba(0,0,0,0.3);
-   }
-   .imagendetalle{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #fff; /* Color de texto en blanco */
+  }
+  
+  .imagendetalle {
     width: 256px;
     height: 256px;
     object-fit: cover;
-   }
+  }
+  

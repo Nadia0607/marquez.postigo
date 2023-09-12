@@ -1,29 +1,42 @@
-.imagenagente{
+/* TarjetaAgente.css */
+.imagenagente {
     width: 150px;
-    height: 150px;
-}
-
-.shadow {
-    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-                0 0  0 2px rgb(190, 190, 190),
-                0.3em 0.3em 1em rgba(0,0,0,0.3);
-   }
-
-.tarjetaagente{
-    width: 35%;
-    height: 154px;
-    background: white;
+    height: 150px; /* Hace que la imagen sea cuadrada */
+  }
+  
+  .shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  }
+  
+  .tarjetaagente {
+    width: 200px; /* Aumenta el ancho para hacerlo más cuadrado */
+    height: 200px; /* Hace que la tarjeta sea cuadrada */
+    background-color: #202329;
     border-radius: 10px;
     transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    margin:10px;
+    margin: 10px;
     text-align: center;
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-a{
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  a {
     text-decoration: none;
-    color: black;
-}
+  }
+  
+  h2 {
+    color: #ff4654; /* Color de texto similar a Valorant */
+    font-size: 18px; /* Tamaño de fuente aumentado */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold;
+  }
+  
+  /* Cambia el color del enlace al pasar el mouse */
+  a:hover h2 {
+    color: #c1303a; /* Color más oscuro al pasar el mouse */
+  }
+  

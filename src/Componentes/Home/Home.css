@@ -1,0 +1,16 @@
+/* Home.css */
+body {
+    background-color: #444444; /* Cambia el color de fondo a gris (ajusta el valor según desees) */
+  }
+
+.agentes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  
+  
+   .agentes-container .tarjetaagente {
+    margin: 10px;
+  }
+  
