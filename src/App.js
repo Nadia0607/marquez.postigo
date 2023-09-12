@@ -10,6 +10,7 @@ import DetalleAgentes from './Componentes/DetalleAgentes/DetalleAgentes';
 function RoutesApp() {
   return (
     <Routes>
+      <Route index element={<Login />} />
       <Route
         path="/*"
         element={
@@ -23,7 +24,6 @@ function RoutesApp() {
         <Route path="mapas" element={<Mapas />} />
         <Route path="detalle/:id" element={<DetalleAgentes />} />
       </Route>
-      <Route index element={<Login />} />
     </Routes>
   );
 }
