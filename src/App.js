@@ -20,7 +20,7 @@ function RoutesApp() {
       <Route path='/' element= {<Home/>} />
       <Route path='login' element= {<Login/>} />
       <Route path='mapas' element= {<Mapas/>} />
-      <Route path='detalle' element= {<DetalleAgentes/>} />   
+      <Route path='detalle/:id' element= {<DetalleAgentes/>} />   
       
     </Routes>
    </div>

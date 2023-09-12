@@ -1,36 +1,33 @@
 import React, { useEffect,useState } from 'react'
-import DetalleAgentes from '../DetalleAgentes/DetalleAgentes';
+import { GetAgentes } from '../../Api/GetAgentes';
+import TarjetaAgente from '../TarjetaAgente/TarjetaAgente';
 
 export default function Home() {
 
 const [agentes, setAgentes] = useState([]);
+const [agenteSeleccionado, setAgenteSeleccionado] = useState();
 
 useEffect(() => {
-  async function traerAgentes(){
+  const fetchdata = async () => {
     try{
-      const response = await fetch('https://valorant-api.com/v1/agents');
-      if(!response.ok){
-        throw new Error ('Fallo la peticion');
-      }
-      const data = await response.json();
-      //console.log(data);
-      const algunosagentes = data.data.slice(0,12);
-      setAgentes(algunosagentes);
-      
+      const data= await GetAgentes();
+      setAgentes(data);
     }
     catch(error){
       console.error('Error al obtener los agentes',error);
     }
   }
 
-traerAgentes();
+fetchdata();
 
 }, [])
+
 //console.log(agentes);
   return (
     <>
+
     {
-      agentes.map((agente,i)=> {return(<DetalleAgentes agente={agente} key={i} />)})
+      agentes.map((agente)=> {return(<TarjetaAgente agente={agente} key={agente.uuid} />)})
     }
     
     </>

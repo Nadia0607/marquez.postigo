@@ -1,0 +1,13 @@
+.imagen{
+    width: 50px;
+    margin-right: 5px;
+
+}
+.tarjeta{
+    border: solid 2px black;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 20px;
+    width: 20%;
+}
