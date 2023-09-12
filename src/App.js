@@ -4,17 +4,23 @@ import './App.css';
 import Home from './Componentes/Home/Home';
 import Login from './Componentes/Login/Login';
 import Navbar from './Componentes/Navbar/Navbar';
+import Mapas from './Componentes/Mapas/Mapas';
+import DetalleAgentes from './Componentes/DetalleAgentes/DetalleAgentes';
 
 
 function RoutesApp() {
   return (
    
    <div>
+    <div>
+      <Navbar/>
+    </div>
     <Routes>
 
       <Route path='/' element= {<Home/>} />
       <Route path='login' element= {<Login/>} />
-      <Route path='navbar' element= {<Navbar/>} />
+      <Route path='mapas' element= {<Mapas/>} />
+      <Route path='detalle' element= {<DetalleAgentes/>} />   
       
     </Routes>
    </div>
@@ -29,3 +35,4 @@ function RouterWrapper(){
   )
 }
 export default RouterWrapper;
+
